@@ -38,7 +38,9 @@ body {
   margin: 2em 0 4em;
   max-width: 100%;
 }
-
+.hero-img {
+  padding-right: 5em;
+}
 .btn {
   display: block;
   padding:1em 1.2em;
@@ -56,6 +58,9 @@ body {
   background-color: var(--clr-green-hover);
 }
 
+.btn-div {
+  display: contents;
+}
 .secondary-btn {
   background-color: var(--clr-purple);
 }
@@ -69,23 +74,29 @@ body {
 }
 
 .about {
+  margin: 0 auto 7em;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 6em;
+  /* margin-bottom: 6em; */
 }
 
 .circle {
-  display: flex;
+  text-align: center;
   position: relative;
   height: 50px;
   width: 50px;
   background-color: #fff;
   border: 1px solid #808080;
   border-radius: 50%;
-  display: inline-block;
+  display: inline-flex;
   border-right: solid 1px black;
   margin: 4em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
 }
 
 .circle::before {
@@ -96,7 +107,49 @@ body {
   bottom: 2.7em;
 }
 
-@media (min-width: 780px) {
+
+.item-img {
+  max-width: 250px;
+  border-radius: 0.9em;
+  margin: 9px;
+}
+
+
+/* infos section */
+
+.info {
+  max-width: 900px;
+  margin: 6em auto;
+}
+
+.overline {
+  color: var(--clr-green);
+  font-weight: var(--fw-bold);
+  letter-spacing: 4px;
+}
+/* footer */
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('/starter-code/assets/tablet/image-footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #4D96A9;
+    background-blend-mode: soft-light;
+    color: #fff;
+    padding: 4em;
+}
+
+.circle-footer {
+  position: absolute;
+  bottom: 73%;
+}
+
+
+@media (min-width: 786px) {
   .hero-tablet {
     display: none;
   }
@@ -109,7 +162,7 @@ body {
   }
 
   .hero-img {
-    width: 30%;
+    width: 400px;
     height: 400px;
     background-repeat: no-repeat;
   }
@@ -120,6 +173,22 @@ body {
   
  .btn {
    display: inline-block;
+ }
+
+ .btn-div {
+   display: inline-block;
+ }
+
+ .footer {
+   background-image: url('/starter-code/assets/desktop/image-footer.jpg');
+   background-repeat: no-repeat;
+   max-width: 1200px;
+   margin: 0 auto;
+   height: 300px;
+ }
+ 
+ .circle-footer{
+   bottom: 67%;
  }
  
 }
