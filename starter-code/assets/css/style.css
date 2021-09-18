@@ -1,7 +1,125 @@
-.hero_left {
-  background-image: url("../desktop/image-hero-left.png");
-  max-width: 100%;
-  height: 350px;
-  background-repeat: no-repeat;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
-/*# sourceMappingURL=style.css.map */
+
+/*custom typography proprities  */
+:root {
+  --ff-primary: 'Red Hat Display', sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 900;
+
+  --clr-green: #4D96A9;
+  --clr-purple: #855FB1;
+  --clr-black: #28283D;
+  --clr-grey: #87879D;
+  --clr-green-hover: #8FE3F9;
+  --clr-purple-hover: #D9B8FF;
+  --fs-h1: 4rem;
+  --fs-h2: 2.75rem;
+  --fs-body: 1.125rem;
+}
+
+
+body {
+  text-align: center;
+  font-size: var(--fs-body);
+  font-family: var(--ff-primary);
+}
+/* header style */
+
+.logo {
+  padding: 1em 0;
+}
+
+.hero-tablet {
+  margin: 2em 0 4em;
+  max-width: 100%;
+}
+
+.btn {
+  display: block;
+  padding:1em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  box-sizing: border-box;
+  font-weight:var(--fw-medium);
+  color:#FFFFFF;
+  background-color:var(--clr-green);
+  text-align:center;
+  transition: all 0.2s;
+  border: none;
+}
+.btn:hover {
+  background-color: var(--clr-green-hover);
+}
+
+.secondary-btn {
+  background-color: var(--clr-purple);
+}
+
+.secondary-btn:hover {
+  background-color: var(--clr-purple-hover);
+}
+
+.btn span {
+  color: var(--clr-green-hover)
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6em;
+}
+
+.circle {
+  display: flex;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border: 1px solid #808080;
+  border-radius: 50%;
+  display: inline-block;
+  border-right: solid 1px black;
+  margin: 4em;
+}
+
+.circle::before {
+  position: absolute;
+  content: "";
+  height: 4em;
+  border-left: 2px solid #808080;
+  bottom: 2.7em;
+}
+
+@media (min-width: 780px) {
+  .hero-tablet {
+    display: none;
+  }
+  .hero-left {
+    background-image: url('/starter-code/assets/desktop/image-hero-left.png');
+  }
+  
+  .hero-right {
+    background-image: url('/starter-code/assets/desktop/image-hero-right.png');
+  }
+
+  .hero-img {
+    width: 30%;
+    height: 400px;
+    background-repeat: no-repeat;
+  }
+  .primary-img {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+ .btn {
+   display: inline-block;
+ }
+ 
+}
